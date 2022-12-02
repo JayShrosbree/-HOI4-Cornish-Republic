@@ -1,0 +1,127 @@
+capital = 123
+oob = "CRW_1936"
+
+set_research_slots = 4
+set_stability = 0.7
+set_war_support = 0.5
+
+recruit_character = CRW_ronald_mcdonald # Before set_politics!!!!
+
+add_ideas = {
+
+    #laws
+    war_economy
+    extensive_conscription
+}
+
+set_technology = {
+    infantry_weapons = 1
+    infantry_weapons1 = 1
+    gw_artillery = 1
+    interwar_antiair = 1
+    early_fighter = 1
+    early_bomber = 1
+    fuel_silos = 1
+    basic_train = 1
+}
+
+if = {
+    limit = { has_dlc = "Man the Guns" }
+    set_technology = {
+        basic_naval_mines = 1
+        submarine_mine_laying = 1
+        early_ship_hull_light = 1
+        early_ship_hull_submarine = 1
+        basic_ship_hull_submarine = 1
+        basic_battery = 1
+        basic_torpedo = 1
+        basic_depth_charges = 1
+    }
+    create_equipment_variant = {
+        name = "Celtic Series"
+        type = ship_hull_submarine_1
+        name_group = CRW_SS_HISTORICAL
+        modules = {
+            fixed_ship_torpedo_slot = ship_torpedo_sub_1
+            fixed_ship_engine_slot = sub_ship_engine_1
+            rear_1_custom_slot = empty
+        }
+        obsolete = yes
+    }
+    set_naval_oob = "CRW_1936_naval_mtg"
+}
+if = {
+    limit = { NOT = { has_dlc = "Man the Guns" } }
+    set_technology = {
+        early_submarine = 1
+        early_destroyer = 1
+    }
+    create_equipment_variant = {
+        name = "Celtic Series"
+        type = submarine_1
+        upgrades = {
+            ship_reliability_upgrade = 1
+            sub_engine_upgrade = 1
+            sub_stealth_upgrade = 1
+            sub_torpedo_upgrade = 1
+        }
+        obsolete = yes
+    }
+    set_naval_oob = "CRW_1936_naval_legacy"
+}
+if = {
+    limit = { has_dlc = "By Blood Alone" }
+    set_air_oob = "CRW_1936_air_bba"
+    set_technology = {
+        aa_lmg = 1
+        engines_1 = 1
+        engines_2 = 1
+        early_bombs = 1
+        aircraft_construction = 1
+        iw_small_airframe = 1
+        iw_medium_airframe = 1
+        iw_large_airframe = 1
+        basic_medium_airframe = 1
+        basic_small_airframe = 1
+    }
+}
+if = {
+    limit = { NOT = { has_dlc = "By Blood Alone" } }
+    set_air_oob = "CRW_1936_air_legacy"
+    set_technology = {
+        early_fighter = 1
+        cv_early_fighter = 1
+        cv_naval_bomber1 = 1
+        naval_bomber1 = 1
+        early_bomber = 1
+        CAS1 = 1
+    }
+}
+
+ENG = {
+    if = {
+        limit = {
+            has_dlc = "Together for Victory"
+        }
+        set_autonomy = {
+            target = CRW
+            autonomous_state = autonomy_integrated_puppet
+        }
+    }
+    else = {
+        puppet = CRW
+    }
+}
+
+
+set_popularities = {    # Notice how set_popularities is after puppeting. Otherwise would lead to puppeting resetting politics.
+    democratic = 80
+    communism = 20
+    fascism = 0
+}
+set_politics = {
+    ruling_party = democratic
+    last_election = "1932.11.8"
+    election_frequency = 48 # Every 4 years
+    elections_allowed = yes
+}
