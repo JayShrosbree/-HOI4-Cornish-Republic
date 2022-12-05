@@ -1,0 +1,31 @@
+state= {
+	id=910
+	name="STATE_910"
+	manpower = 2221013
+	
+	state_category = city
+
+	history= {
+		owner = CRW
+		add_core_of = CRW
+		victory_points = { 540 10 }
+		buildings = {
+			infrastructure = 4 #was: 7
+			industrial_complex = 1
+			anti_air_building = 2
+			radar_station = 1
+			air_base = 6
+			540 = {
+				naval_base = 8
+			}
+
+		}
+		
+	}
+
+	provinces= {
+		540
+ 	}
+
+	local_supplies=0.0 
+}

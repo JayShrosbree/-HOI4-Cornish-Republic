@@ -1,0 +1,15 @@
+state={
+	id=911
+	name="STATE_911"
+	manpower = 69000
+	provinces={
+		3311 
+	}
+	history= {
+		owner = CRW
+		add_core_of = CRW
+		}
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}
