@@ -5,8 +5,17 @@ set_research_slots = 4
 set_stability = 0.7
 set_war_support = 0.5
 
-recruit_character = CRW_ronald_mcdonald # Before set_politics!!!!
+recruit_character = CRW_John_Trewlawny # Before set_politics!!!!
 
+create_country_leader = {
+	name = "John Trelawny"
+	picture = "gfx//leaders//Africa//Portrait_Europe_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
 add_ideas = {
 
     #laws
@@ -38,38 +47,10 @@ if = {
         basic_torpedo = 1
         basic_depth_charges = 1
     }
-    create_equipment_variant = {
-        name = "Celtic Series"
-        type = ship_hull_submarine_1
-        name_group = CRW_SS_HISTORICAL
-        modules = {
-            fixed_ship_torpedo_slot = ship_torpedo_sub_1
-            fixed_ship_engine_slot = sub_ship_engine_1
-            rear_1_custom_slot = empty
-        }
-        obsolete = yes
-    }
+
     set_naval_oob = "CRW_1936_naval_mtg"
 }
-if = {
-    limit = { NOT = { has_dlc = "Man the Guns" } }
-    set_technology = {
-        early_submarine = 1
-        early_destroyer = 1
-    }
-    create_equipment_variant = {
-        name = "Celtic Series"
-        type = submarine_1
-        upgrades = {
-            ship_reliability_upgrade = 1
-            sub_engine_upgrade = 1
-            sub_stealth_upgrade = 1
-            sub_torpedo_upgrade = 1
-        }
-        obsolete = yes
-    }
-    set_naval_oob = "CRW_1936_naval_legacy"
-}
+
 if = {
     limit = { has_dlc = "By Blood Alone" }
     set_air_oob = "CRW_1936_air_bba"

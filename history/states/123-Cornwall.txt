@@ -2,7 +2,10 @@
 state={
 	id=123
 	name="STATE_123"
-
+	resources={
+		steel=20.000
+		aluminium=8.000
+	}
 	history={
 		owner = CRW
 		add_core_of = CRW

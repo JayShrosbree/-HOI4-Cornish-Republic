@@ -1,0 +1,13 @@
+state={
+	id=913
+	name="STATE_913"
+
+
+	add_core_of = WLS
+	provinces={
+		311 6363 9364 
+	}
+	manpower=2002024
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
