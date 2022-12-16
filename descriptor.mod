@@ -4,4 +4,4 @@ tags={
 	"National Focuses"
 }
 name="Cornish Republic"
-supported_version="1.12.6"
+supported_version="1.12.7"

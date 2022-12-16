@@ -2,12 +2,23 @@ state={
 	id=913
 	name="STATE_913"
 
+	resources={
+		steel=10
+	}
+	history={
+		owner = ENG
+		add_core_of = WLS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
 
-	add_core_of = WLS
+		}
+	}
 	provinces={
 		311 6363 9364 
 	}
 	manpower=2002024
 	buildings_max_level_factor=1.000
+	state_category=city
 	local_supplies=0.000
 }
